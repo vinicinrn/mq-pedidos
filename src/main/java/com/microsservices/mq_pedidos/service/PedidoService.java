@@ -12,9 +12,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PedidoService {
 
-    private PedidoRepository pedidoRepository;
+    private final PedidoRepository pedidoRepository;
 
-    public Pedido salvar(Pedido pedido) {
+    public Pedido salvarPedido(Pedido pedido) {
         if(pedido.getItens() != null){
             for(ItemPedido itemPedido : pedido.getItens()){
                 itemPedido.setPedido(pedido);
